@@ -1,16 +1,16 @@
 {
 	"credentials": {
-		"network_id": "FakeNetworkId",
+		"network_id": "CRCHLedgerNetwork",
 		"orderers": [
 			{
-				"discovery": "grpcs://localhost:7050",
+				"discovery": "grpcs://hledger.crc.nd.edu:7050",
 				"msp_id": "Org1MSP",
 				"tls_certificate": "cert_1"
 			}
 		],
 		"cas": [
 			{
-				"api": "https://localhost:8054",
+				"api": "https://hledger.crc.nd.edu:8054",
 				"msp_id": "Org1MSP",
 				"users": [
 					{
@@ -24,8 +24,8 @@
 		"peers": [
 			{
 				"name": "fabric-peer-2a",
-				"discovery": "grpcs://localhost:8051",
-				"events": "grpcs://localhost:8053",
+				"discovery": "grpcs://hledger.crc.nd.edu:8051",
+				"events": "grpcs://hledger.crc.nd.edu:8053",
 				"msp_id": "Org1MSP",
 				"tls_certificate": "cert_1"
 			}
@@ -33,7 +33,7 @@
 		"app": {
 			"channel_id": "mychannel",
 			"chaincode_id": "marbles",
-			"chaincode_version": "v0",
+			"chaincode_version": "v1",
 			"block_delay": 1000
 		},
 		"tls_certificates": {

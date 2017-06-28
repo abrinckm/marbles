@@ -3,14 +3,14 @@
 		"network_id": "Docker Compose Network",
 		"orderers": [
 			{
-				"discovery": "grpc://localhost:7050",
+				"discovery": "grpc://hledger.crc.nd.edu:7050",
 				"msp_id": "Org1MSP",
 				"tls_certificate": "cert_1"
 			}
 		],
 		"cas": [
 			{
-				"api": "http://localhost:7054",
+				"api": "http://hledger.crc.nd.edu:7054",
 				"msp_id": "Org1MSP",
 				"users": [
 					{
@@ -24,8 +24,8 @@
 		"peers": [
 			{
 				"name": "fabric-peer-1a",
-				"discovery": "grpc://localhost:7051",
-				"events": "grpc://localhost:7053",
+				"discovery": "grpc://hledger.crc.nd.edu:7051",
+				"events": "grpc://hledger.crc.nd.edu:7053",
 				"msp_id": "Org1MSP",
 				"tls_certificate": "cert_1"
 			}
@@ -33,7 +33,7 @@
 		"app": {
 			"channel_id": "mychannel",
 			"chaincode_id": "marbles",
-			"chaincode_version": "v0",
+			"chaincode_version": "v1",
 			"block_delay": 10000
 		}
 	}
