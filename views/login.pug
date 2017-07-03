@@ -1,55 +1,55 @@
 extends ./template/layout.pug
-	
-	
+
+
 block custom_header
 	// --------------- Header -------------- //
 	script(type='text/javascript').
 		$(document).ready(function(){
 
 		});
-		
-		
+
+
 block navpanel
 	// --------------- Navigation Bar  -------------- //
 	include ./template/nav.pug
-	
-	
+
+
 block content
 	// --------------- Main Stuff  -------------- //
 	#notificationWrap
-	
+
 	#contentPanel
-		
+
 		// --------------- Welcome Panel
 		#welcomePanel
-			h2(style="font-weight: 600;") WELCOME TO THE MARBLES DEMO APP
+			h2(style="font-weight: 600;") WELCOME TO THE SIMBA DEMO APP
 
 			#adminText
-				span Hello again 
-				span#loginCompany #{bag.marble_company} 
+				span Hello again!{' '}
+				span#loginCompany #{bag.marble_company}!{' '}
 				span admin !
 
-			p 
-				span This application allows you to simulate a simple asset transaction over a Hyperledger Fabric blockchain.  
-				span You can connect multiple peers to trade with a larger marble user base. 
-				span In this application, you can: 
-			
+			p
+				span This application allows you to simulate a simple asset transaction over a Hyperledger Fabric blockchain.!{' '}
+				span You can connect multiple peers to send and receive messages with a large user base.!{' '}
+				span In this application, you can:
+
 			#split1x3Wrap
 				.split1x3
 					.welcomeTitle
-						span Trade
+						span Send Message
 						//br
 							span Assets
 					br
-					.blub1x3 Transfer assets (marbles) across the marbles user base
+					.blub1x3 Send assets (messages) across the SIMBA user base
 					img(src="/imgs/welcome_img1.png").welcomeImg
 				.split1x3
 					.welcomeTitle
 						span Create
 						//br
-							span Marbles
+							span Messages
 					br
-					.blub1x3 Create new assets (marbles)
+					.blub1x3 Create new assets (messages)
 					img(src="/imgs/welcome_img2.png").welcomeImg
 				.split1x3
 					.welcomeTitle
@@ -57,14 +57,14 @@ block content
 						//br
 							span Ownership
 					br
-					.blub1x3 Verify marble transactions
+					.blub1x3 Verify messaging transactions
 					img(src="/imgs/welcome_img3.png").welcomeImg
 			br
 			br
 
-			p 
-				span For more information, please visit our 
-				a(href="https://github.com/IBM-Blockchain/marbles/tree/v3.0") GitHub
+			p
+				span For more information, please visit our
+				a(href="https://github.com/ITAMCO/SIMBA") GitHub
 				span.
 
 

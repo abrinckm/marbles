@@ -11,7 +11,7 @@ $(document).on('ready', function() {
 	$('#showStartupPanel').click(function(){
 		$('#startUpPanel, #tint').fadeIn();
 	});
-	
+
 	// ----------------------------- Actions-------------------------------------
 	//find chaincode again
 	$('#retryDeploy').click(function(){

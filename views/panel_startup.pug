@@ -20,7 +20,7 @@
 			span If successful, this application will download an enrollment certificate. 
 			br
 			br
-			span The admin's certificate is used to authenticate himself for marble transactions. 
+			span The admin's certificate is used to authenticate himself for messaging transactions. 
 		.stepCircleStatus
 
 	.stepNext
@@ -40,8 +40,8 @@
 				span
 				div
 		.stepDescription 
-			span Marbles chaincode defines the rules of the application. 
-			span It describes the assets (marbles) and the rules around marble transfers. 
+			span Message chaincode defines the rules of the application. 
+			span It describes the assets (messages) and the rules around messaging.
 			br
 			br
 			span It only needs to be instantiated once per channel. 
@@ -53,7 +53,7 @@
 	//----------------- Step 3 Content
 	.stepWrap.inactiveStep#step3
 		.stepIcon.fa.fa-group.fa-5x
-		.stepHeader Register Marble Owners
+		.stepHeader Register Messengers
 		a(href="#").stepEdit Edit
 		.stepLoadingWrap
 			.loadingdiv.stepLoading
@@ -64,8 +64,8 @@
 				span
 				div
 		.stepDescription 
-			span As a marbles trading company you may bring new marble owners onboard. 
-			span These marble owners represent your user base, and will transact on the network via your organization’s peer. 
+			span As the host of your blockchain SMS channel, you may invite people onto the channel to communicate. 
+			span These people will transact on the network via your organization's peer. 
 		.stepCircleStatus
 
 	//----------------- All done
@@ -74,7 +74,7 @@
 		br
 		br
 		.stepHelpTxt
-			p Your marbles application is ready to use.
+			p Your SIMBA application is ready to use.
 			br
 			br
 			button(type="button").closeStartUp Close
@@ -113,7 +113,7 @@
 			p 
 				span If this is your first time using the application then&nbsp;
 				a(href="https://github.com/IBM-Blockchain/marbles/blob/v3.0/docs/install_chaincode.md" target="_blank" style="color:#fff;") install/instantiate
-				span &nbsp;marbles chaincode
+				span &nbsp;messaging chaincode
 
 		br
 		.stepInputLegend Orderer 
@@ -132,12 +132,12 @@
 
 	//---------- Register User Help
 	.stepHelpWrap#regUserStep
-		h2 Register Marble Owners
+		h2 Register Messengers
 		br
 		br
 		.stepHelpTxt
-			p Bring your marble owners onboard by providing a comma seperated list of usernames.
-			p These are the identies that can own marbles.
+			p Bring people onboard by providing a comma seperated list of usernames.
+			p These are the identies that can send messages.
 		br
 		.stepInputLegend Company 
 		input(type="text" value=bag.marble_company disabled="disabled").longer
