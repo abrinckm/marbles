@@ -80,7 +80,7 @@ function connect_to_server() {
 				console.log(wsTxt + ' rec', msgObj.msg, ': ledger blockheight', msgObj.block_height);
 				if (msgObj.block_delay) block_ui_delay = msgObj.block_delay * 2;				// should be longer than block delay
 				new_block(msgObj.block_height);													// send to blockchain.js
-				
+
 				if ($('#auditContentWrap').is(':visible')) {
 					var obj = {
 						type: 'audit',

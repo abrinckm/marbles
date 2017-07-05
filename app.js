@@ -19,7 +19,7 @@ var cors = require('cors');
 var async = require('async');
 var fs = require('fs');
 var os = require('os');
-var ws = require('ws');											//websocket module 
+var ws = require('ws');											//websocket module
 var winston = require('winston');								//logginer module
 
 // --- Set Our Things --- //
@@ -89,7 +89,6 @@ app.use(function (err, req, res, next) {														// = development error han
 	if (req.bag.error.status == 404) req.bag.error.msg = 'Sorry, I cannot locate that file';
 	res.render('template/error', { bag: req.bag });
 });
-
 
 // ============================================================================================================================
 // 														Launch Webserver
@@ -278,7 +277,7 @@ function create_assets(build_marbles_users) {
 				logger.debug('prepared marbles obj', marbles.length, marbles);
 
 				// --- Create Marbles--- //
-				async.each(marbles, function (owner_obj, marble_cb) { 			//iter through each one 
+				async.each(marbles, function (owner_obj, marble_cb) { 			//iter through each one
 					create_marbles(owner_obj.id, owner_obj.username, marble_cb);
 				}, function (err) {												//marble owner creation finished
 					logger.debug('- finished creating asset');

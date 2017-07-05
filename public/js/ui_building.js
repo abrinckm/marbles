@@ -67,10 +67,10 @@ function build_user_panels(data) {
 	//reset
 	console.log('[ui] clearing all user panels');
 	$('.ownerWrap').html('');
-	for (var x in known_companies) {
-		known_companies[x].count = 0;
-		known_companies[x].visible = 0;							//reset visible counts
-	}
+	// for (var x in known_companies) {
+	// 	known_companies[x].count = 0;
+	// 	known_companies[x].visible = 0;							//reset visible counts
+	// }
 
 	for (var i in data) {
 		var html = '';
@@ -151,16 +151,18 @@ function build_company_panel(company) {
 
 	var html = '';
 	html += '<div class="companyPanel" company="' + company + '">';
+	// html += '<div class="companyPanel" company="SIMBA">';
 	html += '<div class="companyNameWrap ' + mycss + '">';
-	html += '<span class="companyName">' + company + '&nbsp;-&nbsp;</span>';
+	// html += '<span class="companyName">' + company + '&nbsp;-&nbsp;</span>';
+	html += '<span class="companyName">SIMBA&nbsp;-&nbsp;</span>';
 	html += '<span class="companyVisible">0</span>/';
 	html += '<span class="companyCount">0</span>';
-	if (company === escapeHtml(bag.marble_company)) {
-		html += '<span class="fa fa-exchange floatRight"></span>';
-	}
-	else {
-		html += '<span class="fa fa-long-arrow-left floatRight"></span>';
-	}
+	// if (company === escapeHtml(bag.marble_company)) {
+	// 	html += '<span class="fa fa-exchange floatRight"></span>';
+	// }
+	// else {
+	// 	html += '<span class="fa fa-long-arrow-left floatRight"></span>';
+	// }
 	html += '</div>';
 	html += '<div class="ownerWrap"></div>';
 	html += '</div>';
